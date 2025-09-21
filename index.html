@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Task Manager</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="images/multitasking_18254886.png" alt="Logo"/>
+    <h1>Task Manager</h1>
+  </div>
+  <nav>
+    <a href="#about" onclick="highlightBox('about')">About</a>
+    <a href="#features" onclick="highlightBox('features')">Features</a>
+    <a href="#signin" onclick="highlightBox('signin')">Sign In</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-left">
+    <h1>Manage Your Daily Tasks & Track Progress</h1>
+    <p>Organize your tasks and stay on top of your day. Add new tasks, edit them as needed, and mark them complete quickly. Stay productive and get more done with ease.</p>
+  </div>
+  <div class="hero-right">
+    <h2>Your Tasks</h2>
+    <div class="task-filters">
+      <button id="allBtn" class="active-filter">All(0)</button>
+      <button id="activeBtn">Active(0)</button>
+      <button id="completedBtn">Completed(0)</button>
+    </div>
+    <div class="progress-container">
+      <div class="progress-bar"></div>
+    </div>
+    <div class="add-task">
+      <input type="text" id="taskInput" placeholder="Enter new task..."/>
+      <button id="addBtn"><i class="fas fa-plus"></i> Add Task</button>
+    </div>
+    <button id="clearAllBtn">Clear All Tasks</button>
+    <ul class="task-list" id="taskList"></ul>
+  </div>
+</section>
+
+<section class="info-section">
+  <div class="info-box about" id="about">
+    <h3>About</h3>
+    <p>Manage your daily activities effortlessly and keep all your tasks in one place. Quickly add new tasks, update them whenever needed, and mark them as complete. Stay on top of priorities and plan your day efficiently. Boost your productivity and stay organized every day.</p>
+  </div>
+  <div class="info-box features" id="features">
+    <h3>Featsures</h3>
+    <ul>
+      <li>Easily add, edit, and organize your tasks</li>
+      <li>Track your progress and see what’s completed</li>
+      <li>Responsive design for desktop and mobile devices</li>
+      <li>Simple and intuitive interface for effortless task management</li>
+      <li>Mark tasks as complete and keep your day organized</li>
+    </ul>
+  </div>
+  <div class="info-box signin" id="signin">
+    <h3>Sign In</h3>
+    <input type="text" placeholder="Username"/>
+    <input type="password" placeholder="Password"/>
+    <button>Sign In</button>
+    <a href="#">Don’t have an account? Sign Up</a>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
