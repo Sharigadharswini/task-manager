@@ -114,65 +114,56 @@ nav a:hover {
 }
 
 /* Task Filters */
-.task-filters {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
+.task-filters button {
+  flex: 1; /* make all filters equal width */
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  background: var(--blue-primary); /* bold blue fill */
+  color: #fff; /* white text */
+  transition: 0.3s;
 }
 
-.task-filters button {
-  padding: 6px 14px;
+.task-filters button.active-filter {
+  background: var(--blue-accent); /* highlight active filter */
+  color: #fff;
+}
+
+.task-filters button:hover {
+  opacity: 0.9;
+}
+
+/* Add Task input full width */
+.add-task {
+  display: flex;
+  flex-direction: column; /* stack input and button */
+  gap: 10px;
+}
+
+.add-task input {
+  width: 100%; /* full width */
+  padding: 12px;
+  border: 1px solid var(--blue-accent);
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.add-task button {
+  width: 100%; /* full width */
+  padding: 12px;
+  background: var(--blue-accent);
+  color: #fff;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
   transition: 0.3s;
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-}
-
-.task-filters button.active-filter {
-  background: var(--blue-accent);
-  color: #fff;
-  animation: pulse 0.5s ease;
-}
-
-.task-filters button:hover {
-  opacity: 0.85;
-}
-
-/* Add Task */
-.add-task {
-  margin-bottom: 20px;
-  display: flex;
-  gap: 10px;
-}
-
-.add-task input {
-  padding: 10px;
-  width: 70%;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-.add-task input:focus {
-  outline: none;
-  border-color: var(--blue-accent);
-}
-
-.add-task button {
-  padding: 10px 15px;
-  background: var(--blue-accent);
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s transform 0.2s;
 }
 
 .add-task button:hover {
-  transform: scale(1.05);
+  background: var(--blue-dark);
 }
 
 /* Clear All Button */
@@ -486,3 +477,4 @@ ul.task-list li span {
     font-size: 16px;
   }
 }
+
