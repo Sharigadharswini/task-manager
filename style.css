@@ -161,7 +161,13 @@ ul.task-list li span {font-family: Georgia, serif;font-size: 16px;}
     gap: 30px;
   }
   .hero-left, .hero-right {max-width: 100%;}
-  .add-task input {width:60%;}
+.add-task input {
+  width: 100%; 
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid var(--blue-accent);
+}
+
   .task-filters {flex-wrap: wrap; gap: 8px;}
   .task-filters button {flex: 1 1 30%; text-align: center;}
   .info-box {width:95%;}
@@ -170,6 +176,7 @@ ul.task-list li span {font-family: Georgia, serif;font-size: 16px;}
   .hero-left h1 {font-size:32px;}
   .hero-left p {font-size:16px;}
 }
+
 
 
 
