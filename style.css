@@ -47,14 +47,14 @@ nav a:hover {color: var(--blue-accent);}
 
 /* Task Filters */
 .task-filters button {
-  padding:6px 14px;
-  border:none;
-  border-radius:6px;
-  cursor:pointer;
-  font-weight:bold;
-  transition:0.3s;
-  background:rgba(255,255,255,0.2);
-  color: var(--blue-primary); /* changed to bold blue */
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold; /* bold text */
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--blue-primary); /* bold blue color */
 }
 .task-filters button.active-filter {
   background: var(--blue-accent);
@@ -62,21 +62,22 @@ nav a:hover {color: var(--blue-accent);}
   animation: pulse 0.5s ease;
 }
 .task-filters button:hover {
-  opacity:0.85;
+  opacity: 0.85;
 }
 
 /* Add Task button */
 .add-task button {
-  padding:10px 15px;
-  background: var(--orange-bold); /* changed to orange */
-  color:#fff;
-  border:none;
-  border-radius:6px;
-  cursor:pointer;
-  transition:0.3s transform 0.2s;
+  padding: 10px 15px;
+  background: var(--orange-bold); /* orange button */
+  color: #fff;
+  font-weight: bold; /* make text bold */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 .add-task button:hover {
-  transform:scale(1.05);
+  transform: scale(1.05);
 }
 
 
@@ -173,4 +174,5 @@ ul.task-list li span {font-family: Georgia, serif;font-size: 16px;}
   .hero-left h1 {font-size:32px;}
   .hero-left p {font-size:16px;}
 }
+
 
