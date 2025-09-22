@@ -152,9 +152,9 @@ nav a:hover {
 }
 
 .add-task button {
-  padding: 10px 18px;
-  background: var(--orange-bold);
-  color: #fff;
+  padding: 10px 18px !important;
+  background: var(--orange-bold) !important;
+  color: #fff !important;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -162,6 +162,7 @@ nav a:hover {
   white-space: nowrap;
   transition: 0.3s;
 }
+
 
 .add-task button:hover {
   background: #e56e00;
@@ -415,3 +416,4 @@ ul.task-list li span {
   .hero-left h1 { font-size: 32px; }
   .hero-left p { font-size: 16px; }
 }
+
