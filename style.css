@@ -114,41 +114,37 @@ nav a:hover {
 }
 
 /* Task Filters */
-.task-filters {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
 .task-filters button {
   flex: 1;
   padding: 10px;
   border: none;
   border-radius: 6px;
+  cursor: pointer;
   font-weight: bold;
   background: var(--blue-primary);
   color: #fff;
-  cursor: pointer;
   transition: 0.3s;
 }
 
 .task-filters button.active-filter {
   background: var(--blue-accent);
+  color: #fff;
 }
 
 .task-filters button:hover {
   opacity: 0.9;
 }
 
+/* Add Task box */
 .add-task {
   display: flex;
   gap: 10px;
-  margin-bottom: 20px;
+  margin: 15px 0; /* spacing around */
   align-items: center;
 }
 
 .add-task input {
-  flex: 1; /* input takes available width */
+  flex: 1;
   padding: 10px;
   border: 1px solid var(--blue-accent);
   border-radius: 6px;
@@ -156,7 +152,7 @@ nav a:hover {
 }
 
 .add-task button {
-  padding: 10px 18px;  /* smaller size */
+  padding: 10px 18px;
   background: var(--orange-bold);
   color: #fff;
   border: none;
@@ -171,19 +167,17 @@ nav a:hover {
   background: #e56e00;
 }
 
-
 /* Clear All Button */
 #clearAllBtn {
+  margin-top: 12px; /* extra space below Add Task */
   margin-bottom: 15px;
-  padding: 10px 12px;
+  padding: 8px 12px;
   border: none;
   border-radius: 6px;
   background: #ef4444;
   color: #fff;
   cursor: pointer;
   transition: 0.3s;
-  width: 100%;
-  font-weight: bold;
 }
 
 #clearAllBtn:hover {
@@ -345,15 +339,9 @@ ul.task-list li span {
 
 /* Animations */
 @keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
 
 .animate-pulse {
@@ -404,18 +392,9 @@ ul.task-list li span {
 
 /* Nav click highlight */
 @keyframes highlightEffect {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
-  }
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
-  }
+  0% { transform: scale(1); box-shadow: 0 0 0 rgba(255, 255, 255, 0); }
+  50% { transform: scale(1.05); box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); }
+  100% { transform: scale(1); box-shadow: 0 0 0 rgba(255, 255, 255, 0); }
 }
 
 .animate-highlight {
@@ -424,49 +403,15 @@ ul.task-list li span {
 
 /* Mobile responsive */
 @media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    padding: 40px 20px;
-    gap: 30px;
-  }
-
-  .hero-left,
-  .hero-right {
-    max-width: 100%;
-  }
-
-  .task-filters {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .task-filters button {
-    flex: 1 1 30%;
-    text-align: center;
-  }
-
-  .info-box {
-    width: 95%;
-  }
-
-  header {
-    padding: 10px 20px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  nav a {
-    margin-left: 0;
-    margin-right: 15px;
-  }
-
-  .hero-left h1 {
-    font-size: 32px;
-  }
-
-  .hero-left p {
-    font-size: 16px;
-  }
+  .hero { flex-direction: column; padding: 40px 20px; gap: 30px; }
+  .hero-left, .hero-right { max-width: 100%; }
+  .add-task { flex-direction: column; }
+  .add-task input { width: 100%; }
+  .task-filters { flex-wrap: wrap; gap: 8px; }
+  .task-filters button { flex: 1 1 30%; text-align: center; }
+  .info-box { width: 95%; }
+  header { padding: 10px 20px; flex-direction: column; align-items: flex-start; gap: 10px; }
+  nav a { margin-left: 0; margin-right: 15px; }
+  .hero-left h1 { font-size: 32px; }
+  .hero-left p { font-size: 16px; }
 }
-
