@@ -149,4 +149,67 @@ ul.task-list li span {font-family: Georgia, serif;font-size: 16px;}
 .animate-highlight {
   animation: highlightEffect 0.6s ease;
 }
+/* Mobile responsive */
+@media (max-width: 768px) {
+  /* Hero section: stack vertically */
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  /* Hero left and right full width */
+  .hero-left, .hero-right {
+    max-width: 100%;
+  }
+
+  /* Task input width */
+  .add-task input {
+    width: 60%;
+  }
+
+  /* Filters buttons wrap */
+  .task-filters {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .task-filters button {
+    flex: 1 1 30%;
+    text-align: center;
+  }
+
+  /* Info boxes full width */
+  .info-box {
+    width: 95%;
+  }
+
+  /* Reduce header padding */
+  header {
+    padding: 10px 20px;
+  }
+
+  /* Logo and nav wrap */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+
+  /* Smaller hero title */
+  .hero-left h1 {
+    font-size: 32px;
+  }
+
+  /* Smaller paragraph text */
+  .hero-left p {
+    font-size: 16px;
+  }
+}
+
 
