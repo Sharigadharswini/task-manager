@@ -114,36 +114,42 @@ nav a:hover {
 }
 
 /* Task Filters */
+.task-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
 .task-filters button {
-  flex: 1; /* make all filters equal width */
+  flex: 1;
   padding: 10px;
   border: none;
   border-radius: 6px;
-  cursor: pointer;
   font-weight: bold;
-  background: var(--blue-primary); /* bold blue fill */
-  color: #fff; /* white text */
+  background: var(--blue-primary);
+  color: #fff;
+  cursor: pointer;
   transition: 0.3s;
 }
 
 .task-filters button.active-filter {
-  background: var(--blue-accent); /* highlight active filter */
-  color: #fff;
+  background: var(--blue-accent);
 }
 
 .task-filters button:hover {
   opacity: 0.9;
 }
 
-/* Add Task input full width */
+/* Add Task (stacked full width) */
 .add-task {
   display: flex;
-  flex-direction: column; /* stack input and button */
+  flex-direction: column;
   gap: 10px;
+  margin-bottom: 20px;
 }
 
 .add-task input {
-  width: 100%; /* full width */
+  width: 100%;
   padding: 12px;
   border: 1px solid var(--blue-accent);
   border-radius: 6px;
@@ -151,9 +157,9 @@ nav a:hover {
 }
 
 .add-task button {
-  width: 100%; /* full width */
+  width: 100%;
   padding: 12px;
-  background: var(--blue-accent);
+  background: var(--orange-bold); /* bold orange */
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -163,19 +169,21 @@ nav a:hover {
 }
 
 .add-task button:hover {
-  background: var(--blue-dark);
+  background: #e56e00;
 }
 
 /* Clear All Button */
 #clearAllBtn {
   margin-bottom: 15px;
-  padding: 8px 12px;
+  padding: 10px 12px;
   border: none;
   border-radius: 6px;
   background: #ef4444;
   color: #fff;
   cursor: pointer;
   transition: 0.3s;
+  width: 100%;
+  font-weight: bold;
 }
 
 #clearAllBtn:hover {
@@ -416,25 +424,17 @@ ul.task-list li span {
 
 /* Mobile responsive */
 @media (max-width: 768px) {
-  /* Hero section: stack vertically */
   .hero {
     flex-direction: column;
     padding: 40px 20px;
     gap: 30px;
   }
 
-  /* Hero left and right full width */
   .hero-left,
   .hero-right {
     max-width: 100%;
   }
 
-  /* Task input width */
-  .add-task input {
-    width: 60%;
-  }
-
-  /* Filters buttons wrap */
   .task-filters {
     flex-wrap: wrap;
     gap: 8px;
@@ -445,18 +445,12 @@ ul.task-list li span {
     text-align: center;
   }
 
-  /* Info boxes full width */
   .info-box {
     width: 95%;
   }
 
-  /* Reduce header padding */
   header {
     padding: 10px 20px;
-  }
-
-  /* Logo and nav wrap */
-  header {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
@@ -467,14 +461,11 @@ ul.task-list li span {
     margin-right: 15px;
   }
 
-  /* Smaller hero title */
   .hero-left h1 {
     font-size: 32px;
   }
 
-  /* Smaller paragraph text */
   .hero-left p {
     font-size: 16px;
   }
 }
-
